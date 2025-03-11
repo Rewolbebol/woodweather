@@ -1,0 +1,466 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #3498db;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+    text-align: left;
+}
+
+select,
+input[type="text"],
+input[type="number"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+select:focus,
+input[type="text"]:focus,
+input[type="number"]:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+}
+
+.date-time-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.date-time-group label {
+    width: 100%;
+    margin-bottom: 2px;
+}
+
+.date-time-group input {
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+/* Flatpickr Time Picker Customizations */
+.flatpickr-time {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.flatpickr-time .numInputWrapper {
+    padding: 8px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.flatpickr-time .numInput {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 22px;
+    text-align: center;
+    color: #333;
+    background-color: #fff;
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.flatpickr-time .numInput:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+.flatpickr-time .numInput:hover {
+    background-color: #eee;
+}
+
+.flatpickr-time .flatpickr-time-separator,
+.flatpickr-time .flatpickr-am-pm {
+    padding: 0 8px;
+    font-size: 22px;
+    color: #333;
+}
+
+.flatpickr-time .flatpickr-am-pm:hover,
+.flatpickr-time .flatpickr-time-separator:hover {
+    background-color: #fff !important;
+}
+
+.flatpickr-time .flatpickr-hour,
+.flatpickr-time .flatpickr-minute {
+    background: #eee !important;
+    border-radius: 4px;
+}
+
+.flatpickr-time .flatpickr-hour:hover,
+.flatpickr-time .flatpickr-minute:hover {
+    background-color: #3498db !important;
+    color: white !important;
+}
+
+.flatpickr-time .flatpickr-hour.flatpickr-disabled,
+.flatpickr-time .flatpickr-minute.flatpickr-disabled {
+    color: #ccc !important;
+    background: #f4f4f4 !important;
+}
+
+/* Time dropdown list customization */
+.flatpickr-time .flatpickr-time-container {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.flatpickr-time .flatpickr-time-container .flatpickr-time-inner {
+    padding: 0;
+}
+
+.flatpickr-time .flatpickr-time-container .flatpickr-time-inner .flatpickr-time-list {
+    border: none;
+    border-radius: 4px;
+    height: 200px;
+    overflow-y: auto;
+}
+
+.flatpickr-time .flatpickr-time-container .flatpickr-time-inner .flatpickr-time-list .flatpickr-time-item {
+    padding: 8px 12px;
+    color: #333;
+    border-radius: 0;
+}
+
+.flatpickr-time .flatpickr-time-container .flatpickr-time-inner .flatpickr-time-list .flatpickr-time-item:hover,
+.flatpickr-time .flatpickr-time-container .flatpickr-time-inner .flatpickr-time-list .flatpickr-time-item.active {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.flatpickr-time .flatpickr-time-container .flatpickr-time-inner .flatpickr-time-list .flatpickr-time-item.flatpickr-disabled {
+    color: #ccc;
+    background-color: #f4f4f4;
+}
+
+/* forecast styles */
+.forecast-location,
+.forecast-period,
+.no-data,
+.woodchip-duration {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+.forecast-data {
+    margin-bottom: 20px;
+}
+
+.day-container {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.date-column {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #3498db;
+    font-size: 1.2em;
+}
+
+.hourly-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.hour {
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    width: 80px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    /* Ensure items are in a row */
+    flex-wrap: wrap;
+    /* Allow items to wrap to the next line */
+    align-items: center;
+    /* Center items vertically */
+    position: relative; /* Add position relative for tooltip positioning */
+}
+
+.hour:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hour-time {
+    font-weight: bold;
+    margin-bottom: 0;
+    /* Remove bottom margin */
+}
+
+.hour-temp {
+    font-size: 1.2em;
+    margin-bottom: 0;
+    /* Remove bottom margin */
+    margin-left: auto;
+    /* Push to the right */
+}
+
+.new-search-link {
+    display: inline-block;
+    background-color: #5cb85c;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.new-search-link:hover {
+    background-color: #4cae4c;
+}
+
+.no-data {
+    color: #d9534f;
+    font-weight: bold;
+}
+
+.hour-powerplant {
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 0;
+    /* Remove top margin */
+    margin-left: auto;
+    /* Push to the right */
+}
+
+.woodchip-duration {
+    font-weight: bold;
+}
+
+/*debug data area*/
+.main-content {
+    display: flex;
+    gap: 20px;
+    /* space between columns*/
+    text-align: left;
+    align-items: start;
+}
+
+.debug-data {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* text-align: left; */
+    /*remove text align from this div*/
+    width: 40%;
+    /*take more width */
+    min-width: 350px;
+    /* min width*/
+   
+}
+
+.forecast-results {
+    width: 60%;
+}
+
+.debug-data h2 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.debug-data p {
+    margin-bottom: 10px;
+}
+
+.debug-hourly-data {
+    display: flex;
+    /*add display flex*/
+    flex-direction: column;
+    /*make all data in one line*/
+    gap: 5px;
+    /*add some space betwen elements*/
+}
+
+.debug-hour {
+    /*remove background color*/
+    border: none;
+    /* Remove the border */
+    border-radius: 0px;
+    padding: 0px;
+    font-size: 0.8em;
+    /* make smaller font */
+    box-shadow: none;
+    /*remove box shadow*/
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* min-width: 150px; *//*remove min width*/
+    /* text-align: center; */
+    /*remove text align*/
+    margin-bottom: 0px;
+    /*remove margin*/
+    white-space: normal;
+    /* Keep the content on one line */
+    word-break: break-all;
+}
+
+.debug-data-line {
+    margin-bottom: 5px;
+    /*add margin*/
+}
+
+.hour.woodchip-end {
+    background-color: #ffdddd;
+    /* Light red background */
+}
+
+.hour.woodchip-end + .hour,
+.hour.woodchip-end-next {
+    background-color: #ffdddd;
+}
+
+.hour.woodchip-end .hour-time,
+.hour.woodchip-end .hour-temp,
+.hour.woodchip-end .hour-powerplant,
+.hour.woodchip-end + .hour .hour-time,
+.hour.woodchip-end + .hour .hour-temp,
+.hour.woodchip-end + .hour .hour-powerplant,
+.hour.woodchip-end-next .hour-time,
+.hour.woodchip-end-next .hour-temp,
+.hour.woodchip-end-next .hour-powerplant {
+    animation: pulsate 1s ease-out infinite;
+    /* Pulsating animation */
+    color: red;
+}
+
+@keyframes pulsate {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+    .main-content {
+        flex-direction: column;
+        /* Change to vertical layout */
+    }
+
+    .debug-data {
+        width: 100%;
+        min-width: auto;
+    }
+
+    .forecast-results {
+        width: 100%;
+    }
+}
+
+/* Tooltip Styles */
+#tooltip {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    z-index: 10;
+    font-size: 0.9em;
+    pointer-events: none;
+    /* Prevents the tooltip from interfering with mouse events */
+}
+
+/* Tooltip Styles */
+#tooltip {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    z-index: 10;
+    font-size: 0.9em;
+    pointer-events: none;
+    /* Prevents the tooltip from interfering with mouse events */
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* Standard syntax */
+}
